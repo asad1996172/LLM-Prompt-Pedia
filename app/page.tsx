@@ -1,3 +1,4 @@
+import Feed from '@components/Feed'
 import React from 'react'
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
                 A platform to share working prompts for different LLMs like ChatGPT, LLAMA to help each other navigate the LLM experience.
             </p>
 
-            {/* Feed */}
+            <Feed />
         </section>
     )
 }
