@@ -27,7 +27,7 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link className="flex gap-2 flex-center" href="/">
         <Image src="/assets/images/logo.svg" alt="logo" width={30} height={30} className="object-container" />
-        <p className="logo_text">Prompt Pedia</p>
+        <p className="logo_text"><span className="orange_gradient">Prompt</span> Pedia</p>
       </Link>
 
       {/* Desktop Navigation */}
