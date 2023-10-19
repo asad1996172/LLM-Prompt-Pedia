@@ -13,7 +13,7 @@ const userSchema = new Schema({
     },
     image: {
         type: String,
-    }
+    },
 });
 
 const User = models.User || model("User", userSchema);

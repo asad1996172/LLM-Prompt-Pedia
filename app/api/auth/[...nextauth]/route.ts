@@ -6,15 +6,16 @@ import User from "@models/user";
 const handler = NextAuth({
     providers: [
         GoogleProvider({
-            clientId: process.env.GOOGLE_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
+            clientId: process.env.GOOGLE_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
         })
     ],
     callbacks: {
         async session({ session }) {
-            const sessionUser = await User.findOne({ email: session.user.email });
-            session.user.id = sessionUser._id.toString();
-
+            if (session.user) {
+                const sessionUser = await User.findOne({ email: session.user.email });
+                (session.user as any).id = sessionUser._id.toString();
+            }
             return session;
         },
         async signIn({ profile }) {
@@ -23,14 +24,14 @@ const handler = NextAuth({
                 await connectToDatabase();
 
                 // check if user exists in db
-                const user = await User.findOne({ email: profile.email });
+                const user = await User.findOne({ email: profile?.email });
 
                 // if not, create user in db
                 if (!user) {
                     await User.create({
-                        email: profile.email,
-                        username: profile.name.replace(" ", "").toLowerCase(),
-                        image: profile.image
+                        email: profile?.email,
+                        username: profile?.name?.replace(" ", "").toLowerCase(),
+                        image: profile?.image
                     });
                 }
 

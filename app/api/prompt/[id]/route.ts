@@ -1,7 +1,7 @@
 import Prompt from "@models/prompt";
 import { connectToDatabase } from "@utils/database";
 
-export const GET = async (request, { params }) => {
+export const GET = async (request: Request, { params }) => {
     try {
         await connectToDatabase()
 
@@ -15,7 +15,7 @@ export const GET = async (request, { params }) => {
     }
 }
 
-export const PATCH = async (request, { params }) => {
+export const PATCH = async (request: Request, { params }) => {
     const { prompt, tag, title } = await request.json();
 
     try {
@@ -41,7 +41,7 @@ export const PATCH = async (request, { params }) => {
     }
 };
 
-export const DELETE = async (request, { params }) => {
+export const DELETE = async (request: Request, { params }) => {
     try {
         await connectToDatabase();
 
