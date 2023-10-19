@@ -34,7 +34,7 @@ const CreatePrompt = () => {
                 method: 'POST',
                 body: JSON.stringify({
                     prompt: post.prompt,
-                    userId: session?.user.id,
+                    userId: (session?.user as any)?.id,
                     tag: post.tag,
                     title: post.title,
                 })

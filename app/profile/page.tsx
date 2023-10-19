@@ -22,14 +22,16 @@ const MyProfile = () => {
             return;
         }
         const fetchPosts = async () => {
-            const response = await fetch(`/api/users/${session?.user.id}/posts`);
+            const userId = (session?.user as any)?.id;
+            const response = await fetch(`/api/users/${userId}/posts`);
             const data = await response.json();
 
             setMyPosts(data);
         }
 
-        if (session?.user.id) fetchPosts();
-    }, [session?.user.id])
+        const userId = (session?.user as any)?.id;
+        if (userId) fetchPosts();
+    }, [session?.user])
 
     const handleEdit = (post) => {
         router.push(`/update-prompt?id=${post._id}`);

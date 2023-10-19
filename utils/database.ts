@@ -12,8 +12,6 @@ export const connectToDatabase = async () => {
     try {
         const db = await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "promptpedia",
-            useNewUrlParser: true,
-            useUnifiedTopology: true
         });
         isConnected = true
         console.log("Mongo db is connected !!");

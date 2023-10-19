@@ -13,7 +13,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
         <html lang='en'>
             <body>
-                <Provider>
+                <Provider session={undefined as any}>
                     <div className='main'>
                         <div className='gradient' />
                     </div>
