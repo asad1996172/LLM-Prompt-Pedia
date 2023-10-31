@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LLM Prompt Pedia
+Discover and share AI prompts for various LLMs like ChatGPT and LLAMA. This platform aims to help users navigate the LLM experience by offering a space to share and explore working prompts.
+
+Features:
+- Prompt Exploration: Browse through a variety of prompts shared by the community.
+- Search Functionality: Search for prompts based on tags or usernames.
+- User Authentication: Secure sign-in functionality using Google authentication.
+- User Profiles: Personalized profile pages showcasing user-contributed prompts.
+- Prompt Creation & Editing: Users can create new prompts and edit their existing ones.
+
+Technical Details:
+- Stack used: Next.js, Node.js
+- Database: MongoDB
+- Design Patterns: Model-View-Controller (MVC) for API routes.
+- APIs & Integrations: NextAuth for Google authentication
+- Front-end Technologies: React, Next.js, Tailwind CSS
+- Back-end Technologies: Next.js API routes, Mongoose
 
 ## Getting Started
 
@@ -16,21 +32,5 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Demo
+[![Video Instructions to Run Code](https://i.ytimg.com/vi/dTYEaOq0CuE/hqdefault.jpg)](https://www.youtube.com/watch?v=dTYEaOq0CuE)
